@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # websiteChecker.sh
-# Check to make sure we receive a valid HTML response from the website
+# Check to make sure we receive a valid HTTP response from the website
 # send a notification email if anything other than a 200 or 000 response is received
 
 DATE=`date`
@@ -11,7 +11,7 @@ CACHEFILE=/tmp/websiteChecker.tmp
 SENDER='xxxx@midcenturymaddist.com'
 RECIPIENTS='xxxx@midcenturymaddist.com xxxx@gmail.com'
 
-#valid html response codes ... 200 ok, 206 partial content, 000 client abort
+#valid http response codes ... 200 ok, 206 partial content, 000 client abort
 if [ ${RESPONSE} -eq 200 -o ${RESPONSE} -eq 000 ] ;
 then
   #website is up
